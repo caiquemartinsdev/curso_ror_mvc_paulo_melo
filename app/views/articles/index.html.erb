@@ -2,7 +2,14 @@
 <ul>
     <%  @articles.each do |article| %>
     <li>
-        <%= article.title%>
+<!--
+        <p><%= article.title%></p>
+        <a href="/articles/<%= article.id %>"> 
+        <p>Ver artigo</p>
+        </a>
+    Podemos trocar o código acima pelo código que está logo abaixo
+-->
+        <%= link_to(article.title, article) %>
     </li>
     <% end %>
 </ul>
